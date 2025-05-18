@@ -81,17 +81,31 @@ Login to DockerHub--->docker login -u <DockerHubUserName>--->Click Enter--->Ente
 $ docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 $ docker ps (You can see SonarQube container)
 
-<Follow the process as explained in the video>
+connect to sonarqube in browser---><publicip:9000>--->you will see sonarqube home page--->Username:admin,Password:admin--->Login--->Update new password--->Update--->You can see SonarQube Dashboard
 
 10. Installation of Plugins in Jenkins
 Install below plugins:
-<Follow the process as explained in the video>
+Eclipse Temurin installer,SonarQube Scanner,NodeJS,OWASP Dependency-check 5.5.1,Docker 1.6.2,Docker Commons,Docker pipeline,docker api,docker-build-step,pipeline:stage view,prometheus metrics,Email extension template--->install--->you will see error while installing Prometheus plugin,Read the error message.Here we need to restart the jenkins--->Check the box below 'Go back to the top of page' to restart the jenkins
 
 11. SonarQube configuration in Jenkins
-<Follow the process as explained in the video>
+Before configuring sonarqube in jenkins,we need to generate a sonarqube token to establish a connection b/w jenkins and sonarqube,goto sonarqube-->administration(top pane)--->'security' drop down--->users-->click on 3 bars under tokens--->Name:jenkins,Expires in:30 days--->Generate-->Copy the token.
 
 11.1. Tools Configuration in Jenkins
-<Follow the process as explained in the video>
+Manage jenkins
+system configuration
+tools
+JDK installation
+Add JDK
+Name:jdk17
+Check install automatically
+click on Add installer
+select install from adoptium.net
+version:jdk-17.0.8.1+1
+
+Sonarqube scanner
+Name:sonar-scanner
+version:latest version
+node js installation
 
 11.2. Configuration of SonarQube Token in Jenkins
 <Follow the process as explained in the video>
