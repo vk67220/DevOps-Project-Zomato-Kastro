@@ -119,7 +119,6 @@ As soon as the build happens, i need to get an email notification to do that we 
 
 
 12. System Configuration in Jenkins
-<Follow the process as explained in the video>
 
 13. Create webhook in SonarQube
 <Follow the process as explained in the video>
